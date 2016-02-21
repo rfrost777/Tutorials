@@ -1,2 +1,2 @@
 # Tutorials
-Asorted tutorial material. Probably not very interesting for you.
+Nothing to see here. Move along!
