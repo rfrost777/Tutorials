@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
 
   int a=10, b=15;
   int *p, *q;
@@ -12,6 +12,7 @@ int main() {
   printf("Dereferenced p : %d\n", *p);
   printf("The Value of b is: %d\n", b);
   printf("The value of q is: %d\n", q);
+  printf("Dereferenced q : %d\n", *q);
   getchar();
 
   return 0;
