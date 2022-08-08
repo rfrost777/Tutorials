@@ -1,6 +1,6 @@
 ; Hello World Assembly Version (Intel-x86)
 ; using POSIX syscalls 0x04 (write), 0x01 (exit)
-; TODO: write an IA-x64 version of this...
+; TODO: write an IA-x64 version of this... done! :)
 
 global main        ; define entry label
 
