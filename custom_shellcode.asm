@@ -14,11 +14,11 @@ RESUME:
     mov rdi, 0x01       ; set file descriptor STDOUT_FILENO to STDOUT(1)
     pop rsi             ; ... where we pop it from the stack into rsi
     mov rdx, 0x1F       ; let's hope that I counted the buffer length correctly:
-                        ; 29 byte + \r + \n = 31 or 0x1F byte length
+                        ; 29 byte + \r + \n = 31 or 0x1F byte buffer size
     syscall             ; fingers crossed, request the write
 
     mov rax, 0x3C       ; invoke exit64() syscall
-    mov rdi, 0x0        ; set exit value (0 = EXIT_SUCCESS)
+    mov rdi, 0x00       ; set exit value (0 = EXIT_SUCCESS)
     syscall             ; request termination
 
 INFOSTRING:
