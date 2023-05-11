@@ -4,12 +4,19 @@
  *  using rust_lang.
  */
 use std::str;
+use std::io;
 pub(crate) use rot13::rot13;
 pub(crate) use base64::{Engine as _, engine::general_purpose};
 
 fn main() {
     // The encoded flag as given in the challange task:
     const FLAG_ENCODED : &str = "M3I6r2IbMzq9";
+
+    // Input your encoded flag here:
+    let mut input_flag = String::new();
+    io::stdin()
+        .read_line(&mut input_flag)
+        .expect("[E] Failed to read from stdin!");
 
     // Start by ROT13 encode our flag, then base64 decode the result:
     let flag_rot13 =  &general_purpose::STANDARD_NO_PAD.decode(rot13(FLAG_ENCODED)).unwrap();
