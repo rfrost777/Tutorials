@@ -1,11 +1,12 @@
 /*###########################################################
 #   Baby's first dynamic loadable kernel module!
+#   As basic as it gets.
 #   Usage: (sudo) insmod ./babysfirst_module.ko
 ###########################################################*/
 #include <linux/init.h>
 #include <linux/module.h>
 
-// This kernel macro is needed somehow? I should check!
+// Seems to be needed if our kernel has version suppport is enabled.
 MODULE_LICENSE("Dual BSD/GPL");
 
 // Init function (called by insmod)
